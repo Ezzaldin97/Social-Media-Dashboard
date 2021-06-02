@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel='stylesheet' href='static/style.css'>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Social Media Dashboard</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <script src='js/white-theme.js'></script>
+  <div id='container'>
+    <div id='header'>
+      <div id='header-title'>
+        <h2>Social Media Dashboard</h2>
+        <h5>Total Followers: 23,004</h5>
+      </div>
+      <div id='dark-mode-part'>
+        <h5>Dark Mode</h5>
+        <div id='mode-btn'>
+          <div id='mode-toggle'>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='social-media-platforms'>
+      <div id='fb' class='sm-section'>
+        <h6><i class="fa fa-facebook-official" aria-hidden="true"></i> @nathanf</h6>
+        <h1>1987</h1>
+        <h3>Followers</h3>
+        <h5><i class="fa fa-caret-up" aria-hidden="true"></i> 12 Today</h5>
+      </div>
+      <div id='t' class='sm-section'>
+        <h6><i class="fa fa-twitter" aria-hidden="true"></i> @nathanf</h6>
+        <h1>1044</h1>
+        <h3>Followers</h3>
+        <h5><i class="fa fa-caret-up" aria-hidden="true"></i> 99 Today</h5>
+      </div>
+      <div id='i' class='sm-section'>
+        <h6><i class="fa fa-instagram" aria-hidden="true"></i> @realnathanf</h6>
+        <h1>11k</h1>
+        <h3>Followers</h3>
+        <h5><i class="fa fa-caret-up" aria-hidden="true"></i> 1099 Today</h5>
+      </div>
+      <div id='yt' class='sm-section'>
+        <h6><i class="fa fa-youtube-play" aria-hidden="true"></i> Nathan F.</h6>
+        <h1>8239</h1>
+        <h3>Subscribers</h3>
+        <h5><i class="fa fa-caret-down" aria-hidden="true"></i> 144 Today</h5>
+      </div>
+    </div>
+    <div id='social-media-overview'>
+      <h3>Overview - Today</h3>
+      <div id='social-media-overview-sections'>
+        <div class='row'>
+          <div class='section' id='facebook-1'>
+            <div class='part-1'>
+              <h5>Page Views</h5>
+              <h3>87</h3>
+            </div>
+            <div class='part-2 up fb'>
+              <h5><i class="fa fa-facebook-official" aria-hidden="true"></i></h5>
+              <h6><i class="fa fa-caret-up" aria-hidden="true"></i>3%</h6>          
+            </div>
+          </div>
+          <div class='section' id='facebook-2'>
+            <div class='part-1'>
+              <h5>Likes</h5>
+              <h3>52</h3>
+            </div>
+            <div class='part-2 down fb'>
+              <h5><i class="fa fa-facebook-official" aria-hidden="true"></i></h5>
+              <h6><i class="fa fa-caret-down" aria-hidden="true"></i>2%</h6>          
+            </div>
+          </div>
+          <div class='section' id='insta-1'>
+            <div class='part-1'>
+              <h5>Likes</h5>
+              <h3>5462</h3>
+            </div>
+            <div class='part-2 up i'>
+              <h5><i class="fa fa-instagram" aria-hidden="true"></i></h5>
+              <h6><i class="fa fa-caret-up" aria-hidden="true"></i>2257%</h6>          
+            </div>
+          </div>
+          <div class='section' id='insta-2'>
+            <div class='part-1'>
+              <h5>Page Views</h5>
+              <h3>52k</h3>
+            </div>
+            <div class='part-2 up i'>
+              <h5><i class="fa fa-instagram" aria-hidden="true"></i></h5>
+              <h6><i class="fa fa-caret-up" aria-hidden="true"></i>1375%</h6>          
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='section' id='twitter-1'>
+            <div class='part-1'>
+              <h5>Retweets</h5>
+              <h3>117</h3>
+            </div>
+            <div class='part-2 up t'>
+              <h5><i class="fa fa-twitter" aria-hidden="true"></i></h5>
+              <h6><i class="fa fa-caret-up" aria-hidden="true"></i>303%</h6>          
+            </div>
+          </div>
+          <div class='section' id='twitter-2'>
+            <div class='part-1'>
+              <h5>Likes</h5>
+              <h3>507</h3>
+            </div>
+            <div class='part-2 up t'>
+              <h5><i class="fa fa-twitter" aria-hidden="true"></i></h5>
+              <h6><i class="fa fa-caret-up" aria-hidden="true"></i>553%</h6>          
+            </div>
+          </div>
+          <div class='section' id='youtube-1'>
+            <div class='part-1'>
+              <h5>Likes</h5>
+              <h3>107</h3>
+            </div>
+            <div class='part-2 down yt'>
+              <h5><i class="fa fa-youtube-play" aria-hidden="true"></i></h5>
+              <h6><i class="fa fa-caret-down" aria-hidden="true"></i>19%</h6>          
+            </div>
+          </div>
+          <div class='section' id='youtube-2'>
+            <div class='part-1'>
+              <h5>Total Views</h5>
+              <h3>1407</h3>
+            </div>
+            <div class='part-2 down yt'>
+              <h5><i class="fa fa-youtube-play" aria-hidden="true"></i></h5>
+              <h6><i class="fa fa-caret-down" aria-hidden="true"></i>12%</h6>          
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<!--
+  Social Media Dashboard
+  Total Followers: 23,004
+
+  Dark Mode
+
+  
+
+  @nathanf
+  1987
+  Followers
+  12 Today
+
+  @nathanf
+  1044
+  Followers
+  99 Today
+
+  @realnathanf
+  11k
+  Followers
+  1099 Today
+
+  Nathan F.
+  8239
+  Subscribers
+  144 Today
+
+
+
+  Overview - Today
+
+  Page Views
+  87
+  3%
+
+  Likes
+  52
+  2%
+
+  Likes
+  5462
+  2257%
+
+  Profile Views
+  52k
+  1375%
+
+  Retweets
+  117
+  303%
+
+  Likes
+  507
+  553%
+
+  Likes
+  107
+  19%
+
+  Total Views
+  1407
+  12%
+-->

@@ -1,0 +1,337 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Lime Green: hsl(163, 72%, 41%)
+- Bright Red: hsl(356, 69%, 56%)
+
+- Facebook: hsl(208, 92%, 53%)
+- Twitter: hsl(203, 89%, 53%)
+- Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+- YouTube: hsl(348, 97%, 39%)
+
+#### Dark Theme
+
+- Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
+
+#### Light Theme
+
+- Toggle: hsl(230, 22%, 74%)
+
+### Neutral
+
+#### Dark Theme
+
+- Very Dark Blue (BG): hsl(230, 17%, 14%)
+- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
+- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
+- Desaturated Blue (Text): hsl(228, 34%, 66%)
+- White (Text): hsl(0, 0%, 100%)
+
+#### Light Theme
+
+- White (BG): hsl(0, 0%, 100%)
+- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
+- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
+- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
+- Very Dark Blue (Text): hsl(230, 17%, 14%)
+
+## Typography
+
+### Body Copy
+
+- Font size (Overview Card Headings): 14px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+*/    
+:root{
+    /* color */
+    --dbg-color: hsl(230, 17%, 14%);
+    --card-dbg-color: hsl(228, 28%, 20%);
+    --top-bg-color: hsl(232, 19%, 15%);
+    --card-hover-color: hsl(230, 27%, 30%);
+    --white-text: hsl(0, 0%, 100%);
+    --text-small-color: hsl(228, 34%, 66%);
+    --toggle-1: hsl(210, 78%, 56%);
+    --toggle-2: hsl(146, 68%, 55%);
+    --green: hsl(163, 72%, 41%);
+    --red: hsl(356, 69%, 56%);
+    --fb-color: hsl(208, 92%, 53%);
+    --t-color: hsl(203, 89%, 53%);
+    --i-color: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --yt-color: hsl(348, 97%, 39%);
+    /* white-theme-colors */
+    --card-wbg-color: hsl(227, 47%, 96%);
+    /* font */
+    --main-font: 'Inter', sans-serif;
+    /*lengths*/
+    --btn-body-width: 45px;
+    --btn-width: 20px;
+    --btn-body-height: 20px;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--top-bg-color);
+}
+body.wbg{
+    background-color: var(--white-text);
+}
+#container{
+    margin: 2% 8%;
+}
+#container #header{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    font-family: var(--main-font);
+}
+#container #header #header-title h2{
+    color: var(--white-text);
+}
+#container #header #header-title h2.dfc{
+    color: var(--card-dbg-color);
+}
+#container #header #header-title h5{
+    color: var(--text-small-color);
+}
+#container #header #dark-mode-part{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#container #header #dark-mode-part h5{
+    color: var(--text-small-color);
+    margin-right: 8px;
+}
+#container #header #dark-mode-part #mode-btn{
+    width: var(--btn-body-width);
+    height: var(--btn-body-height);
+    background-image: linear-gradient(to right, var(--toggle-1), var(--toggle-2));
+    border-radius: 30px;
+    cursor: pointer;
+}
+#container #header #dark-mode-part #mode-btn.mode-body-wbg{
+    background-image: none;
+    background-color: var(--text-small-color);
+}
+#container #header #dark-mode-part #mode-btn #mode-toggle{
+    width: var(--btn-width);
+    height: 16px;
+    background-color: var(--dbg-color);
+    border-radius: 50%;
+    margin: 2px 2px;
+    float: left;
+}
+#container #header #dark-mode-part #mode-btn #mode-toggle.wbg-right{
+    float: right;
+    background-color: var(--white-text);
+}
+#container #social-media-platforms{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+    margin-top: 4%;
+    font-family: var(--main-font);
+}
+#container #social-media-platforms .sm-section{
+    background-color: var(--card-dbg-color);
+    text-align: center;
+    padding: 30px 50px;
+    width: 20%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#container #social-media-platforms .sm-section.card-wbg{
+    background-color: var(--card-wbg-color);
+}
+#container #social-media-platforms .sm-section:hover{
+    background-color: var(--card-hover-color);
+}
+#container #social-media-platforms .sm-section.card-wbg:hover{
+    background-color: hsl(225, 100%, 98%);
+}
+#container #social-media-platforms #fb{
+    border-top: 4px solid var(--fb-color);
+}
+#container #social-media-platforms #t{
+    border-top: 4px solid var(--t-color);
+}
+#container #social-media-platforms #i{
+    border-top: 4px solid;
+    border-image: var(--i-color) 1;
+}
+#container #social-media-platforms #yt{
+    border-top: 4px solid var(--yt-color);
+}
+#container #social-media-platforms .sm-section h6{
+    color: var(--text-small-color);
+    margin-bottom: 20px;
+}
+#container #social-media-platforms #fb h6 i{
+    color: var(--fb-color);
+    font-size: 16px;
+    margin-right: 5px;
+}
+#container #social-media-platforms #t h6 i{
+    color: var(--t-color);
+    font-size: 16px;
+    margin-right: 5px;
+}
+#container #social-media-platforms #i h6 i{
+    font-size: 16px;
+    background: var(--i-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 5px;
+}
+#container #social-media-platforms #yt h6 i{
+    color: var(--yt-color);
+    font-size: 16px;
+    margin-right: 5px;
+}
+#container #social-media-platforms .sm-section h1{
+    color: var(--white-text);
+    font-size: 50px;
+}
+#container #social-media-platforms .sm-section h1.card-w-text{
+    color: var(--card-dbg-color);
+}
+#container #social-media-platforms .sm-section h3{
+    color: var(--text-small-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+#container #social-media-platforms .sm-section h5{
+    color: var(--green);
+}
+#container #social-media-platforms #yt h5{
+    color: var(--red);
+}
+#container #social-media-overview{
+    margin-top: 4%;
+    font-family: var(--main-font);
+}
+#container #social-media-overview h3{
+    color: var(--white-text);
+}
+#container #social-media-overview h3.w-text{
+    color: var(--text-small-color);
+}
+#container #social-media-overview #social-media-overview-sections{
+    margin-top: 2%;
+}
+#container #social-media-overview #social-media-overview-sections .row{
+    display: flex; 
+    justify-content: space-between;
+    align-self: center;
+}
+#container #social-media-overview #social-media-overview-sections .row:nth-child(2){
+    margin-top: 2%;
+}
+#container #social-media-overview #social-media-overview-sections .row .section{
+    width: 20%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 30px 20px;
+    background-color: var(--card-dbg-color);
+    cursor: pointer;
+}
+#container #social-media-overview #social-media-overview-sections .row .section.card-wbg{
+    background-color: var(--card-wbg-color);
+}
+#container #social-media-overview #social-media-overview-sections .row .section:hover{
+    background-color: var(--card-hover-color);
+}
+#container #social-media-overview #social-media-overview-sections .row .section.card-wbg:hover{
+    background-color: hsl(225, 100%, 98%);
+}
+#container #social-media-overview #social-media-overview-sections .row .section div h5{
+    color: var(--text-small-color);
+    margin-bottom: 20px;
+}
+#container #social-media-overview #social-media-overview-sections .row .section div h3{
+    font-size: 35px;
+}
+#container #social-media-overview #social-media-overview-sections .row .section div h3.d-text{
+    color: var(--dbg-color);
+}
+#container #social-media-overview #social-media-overview-sections .row .section .down h6{
+    color: var(--red);
+}
+#container #social-media-overview #social-media-overview-sections .row .section .part-2{
+    text-align: right;
+}
+#container #social-media-overview #social-media-overview-sections .row .section .up h6{
+    color: var(--green);
+}
+#container #social-media-overview #social-media-overview-sections .row .section .fb h5{
+    color: var(--fb-color);
+    font-size: 16px;
+}
+#container #social-media-overview #social-media-overview-sections .row .section .i h5{
+    font-size: 16px;
+    background: var(--i-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#container #social-media-overview #social-media-overview-sections .row .section .t h5{
+    font-size: 16px;
+    color: var(--t-color);
+}
+#container #social-media-overview #social-media-overview-sections .row .section .yt h5{
+    font-size: 16px;
+    color: var(--yt-color);
+}
+@media (max-width: 380px) {
+    #container #header{
+        display: block;
+    }
+    #container #header #dark-mode-part{
+        margin-top: 10px;
+        padding-top: 10px;
+        justify-content: space-between;
+        border-top: 1px solid var(--text-small-color);
+    }
+    #container #social-media-platforms{
+        display: block;
+        margin-top: 4%;
+        font-family: var(--main-font);
+    }
+    #container #social-media-platforms .sm-section{
+        width: 80%;
+        margin: auto auto 20px auto;
+    }
+    #container #social-media-overview #social-media-overview-sections .row{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+    #container #social-media-overview #social-media-overview-sections .row .section{
+        width: 80%;
+        margin-top: 20px;
+    }
+}
